@@ -11,6 +11,8 @@ out-tsc/
 # TypeScript configuration
 tsconfig.json
 tslint.json
+*.tsbuildinfo
+
 
 # IDEs and editors
 .idea/
