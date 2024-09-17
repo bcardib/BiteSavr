@@ -1,0 +1,39 @@
+<div style="text-align:center">
+  <h1>Item Lookup</h1>
+
+
+  <input [(ngModel)]="item" type="text" placeholder="Enter item" />
+
+
+  <button (click)="checkItem()">Check Item</button>
+
+
+  <p *ngIf="itemType">{{ itemType }}</p>
+
+
+  <input [(ngModel)]="quantity" type="number" placeholder="Enter quantity" [disabled]="isQuantityInputDisabled" />
+
+
+  <button (click)="addItem()">Add Item</button>
+
+
+  <button (click)="submitData()">Submit</button>
+
+
+  <ul>
+    <li *ngFor="let item of itemList">
+      {{ item.item }} ({{ item.type }}) - Quantity: {{ item.quantity }} - Price: ${{ item.price }}
+    </li>
+  </ul>
+
+
+  <h2>Items Grouped by Shop</h2>
+  <div *ngFor="let shop of (sortedItems | keyvalue)">
+    <h3>{{ shop.key }}</h3>
+    <ul>
+      <li *ngFor="let item of shop.value">
+        {{ item.name }} - Price: ${{ item.price }}
+      </li>
+    </ul>
+  </div>
+</div>
