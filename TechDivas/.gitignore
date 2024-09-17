@@ -1,1 +1,36 @@
-node_modules
+# Dependency directories
+node_modules/
+bower_components/
+
+# Build output
+dist/
+out-tsc/
+*.js
+*.map
+
+# TypeScript configuration
+tsconfig.json
+tslint.json
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+*.env
+
+# Logs
+*.log
+
+# Miscellaneous
+*.swp
+*.swo
+*.tmp
+*.temp
