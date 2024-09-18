@@ -8,3 +8,6 @@ Team Name: TechDivas
 4. Open new terminal tab
 5. Navigate to 'Group-7' the base folder
 6. Run command "python3 app.py"
+
+
+brew install tesseract
