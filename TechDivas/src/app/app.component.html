@@ -1,39 +1,59 @@
 <div style="text-align:center">
   <h1>Item Lookup</h1>
-
-
-  <input [(ngModel)]="item" type="text" placeholder="Enter item" />
-
-
-  <button (click)="checkItem()">Check Item</button>
-
-
-  <p *ngIf="itemType">{{ itemType }}</p>
-
-
-  <input [(ngModel)]="quantity" type="number" placeholder="Enter quantity" [disabled]="isQuantityInputDisabled" />
-
-
+  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+    <input [(ngModel)]="item" type="text" placeholder="Enter item" (blur)="checkItem()" />
+    <p *ngIf="itemType">{{ itemType }}</p>
+    <input [(ngModel)]="quantity" type="number" placeholder="Enter quantity" [disabled]="isQuantityInputDisabled" />
+  </div>
   <button (click)="addItem()">Add Item</button>
-
-
-  <button (click)="submitData()">Submit</button>
-
-
+  <p *ngIf="submissionMessage" style="color:green;">{{ submissionMessage }}</p>
+  <p *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</p>
+  <h3>Input Items</h3>
   <ul>
-    <li *ngFor="let item of itemList">
-      {{ item.item }} ({{ item.type }}) - Quantity: {{ item.quantity }} - Price: ${{ item.price }}
+    <li *ngFor="let item of inputItemList">
+      {{ item.name }} ({{ item.type }}) - Quantity: {{ item.quantity }}
     </li>
   </ul>
+  <button (click)="submitData()">Search</button>
+  <div *ngIf="isSearchSubmitted">
+    <button (click)="togglePage()">Toggle View</button>
 
+    <!-- List of the locations of the cheapest version of each product -->
+    <div *ngIf="!isSecondPage">
+      <h3>Output Items</h3>
+      <ul>
+        <li *ngFor="let item of outputItemList">
+          {{ item.store }}: {{ item.name }} ({{ item.quantity }}) - Price: ${{ item.price }}
+        </li>
+      </ul>
+    </div>
 
-  <h2>Items Grouped by Shop</h2>
-  <div *ngFor="let shop of (sortedItems | keyvalue)">
-    <h3>{{ shop.key }}</h3>
-    <ul>
-      <li *ngFor="let item of shop.value">
-        {{ item.name }} - Price: ${{ item.price }}
-      </li>
-    </ul>
+    <!-- Multiple store displays so user can go to just one store -->
+    <div *ngIf="isSecondPage">
+      <h3>Cheapest Store</h3>
+      <p>The cheapest store is: {{ cheapestStore }} with a total price of ${{ totalCosts[cheapestStore] }}</p>>
+      <h2>{{ cheapestStore }} Basket</h2>
+      <ul>
+        <li *ngFor="let item of storeBaskets[cheapestStore]">
+          {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
+        </li>
+      </ul>
+      <button (click)="toggleExpanded()">
+        {{ expanded ? 'Hide Other Stores' : 'Show Other Stores' }}
+      </button>
+      <div *ngIf="expanded">
+        <div *ngFor="let store of storeKeys">
+          <ng-container *ngIf="store !== cheapestStore">
+            <h4>{{ store }} Basket</h4>
+            <ul>
+              <li *ngFor="let item of storeBaskets[store]">
+                {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
+              </li>
+            </ul>
+            <h4>Total cost: ${{totalCosts[store]}}</h4>
+          </ng-container>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,109 @@
+{
+    "productData": [
+        {
+            "store": "Coles",
+            "product": "Milk",
+            "brand": "Coles",
+            "price": 2.5,
+            "quantity": "1 litre"
+        },
+        {
+            "store": "Coles",
+            "product": "Milk",
+            "brand": "Dairy Farmers",
+            "price": 3.0,
+            "quantity": "1 litre"
+        },
+        {
+            "store": "Coles",
+            "product": "Milk",
+            "brand": "Devondale",
+            "price": 2.8,
+            "quantity": "1 litre"
+        },
+        {
+            "store": "Coles",
+            "product": "Bread",
+            "brand": "Coles",
+            "price": 2.0,
+            "quantity": "700 grams"
+        },
+        {
+            "store": "Coles",
+            "product": "Bread",
+            "brand": "Wonder White",
+            "price": 2.5,
+            "quantity": "700 grams"
+        },
+        {
+            "store": "Coles",
+            "product": "Bread",
+            "brand": "Tip Top",
+            "price": 3.0,
+            "quantity": "700 grams"
+        },
+        {
+            "store": "Coles",
+            "product": "Eggs",
+            "brand": "Coles",
+            "price": 3.5,
+            "quantity": "12 eggs"
+        },
+        {
+            "store": "Coles",
+            "product": "Eggs",
+            "brand": "Sunny Queen",
+            "price": 4.0,
+            "quantity": "12 eggs"
+        },
+        {
+            "store": "Coles",
+            "product": "Eggs",
+            "brand": "Farm Pride",
+            "price": 3.8,
+            "quantity": "12 eggs"
+        },
+        {
+            "store": "Coles",
+            "product": "Pasta",
+            "brand": "San Remo",
+            "price": 1.5,
+            "quantity": "500 grams"
+        },
+        {
+            "store": "Coles",
+            "product": "Pasta",
+            "brand": "Barilla",
+            "price": 2.0,
+            "quantity": "500 grams"
+        },
+        {
+            "store": "Coles",
+            "product": "Pasta",
+            "brand": "Coles",
+            "price": 1.2,
+            "quantity": "500 grams"
+        },
+        {
+            "store": "Coles",
+            "product": "Rice",
+            "brand": "Coles",
+            "price": 1.9,
+            "quantity": "1 kilogram"
+        },
+        {
+            "store": "Coles",
+            "product": "Rice",
+            "brand": "SunRice",
+            "price": 2.3,
+            "quantity": "1 kilogram"
+        },
+        {
+            "store": "Coles",
+            "product": "Rice",
+            "brand": "Riviana",
+            "price": 2.0,
+            "quantity": "1 kilogram"
+        }
+    ]
+}
