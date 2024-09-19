@@ -109,12 +109,26 @@ def store_baskets():
 def submit_data():
     try:
         data = request.get_json()
-        file_paths = ['colesData.json', 'aldiData.json', 'woolworthsData.json']
-        comparison_result = compare_stores(file_paths, data)
+        print(data)
+        data = [{'name': 'bread', 'type': 'slices', 'quantity': 1}]
+        dict_from_list = data[0] if data else {}
+        print(dict_from_list)
+        
+        # Validate that the data is a dictionary and contains a 'basket' key
+        if not isinstance(dict_from_list, dict):
+            raise ValueError("Expected JSON object (dictionary) with a 'basket' key.")
+        
+      
+        # File paths for comparison
+        file_paths = ['products_data.json', 'aldiData.json', 'woolworthsData.json']
+        
+        # Compare store data
+        comparison_result = compare_stores(file_paths, dict_from_list)
         return jsonify(comparison_result)
     except Exception as e:
         print(f"Error: {e}")  
         return jsonify({"error": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run()

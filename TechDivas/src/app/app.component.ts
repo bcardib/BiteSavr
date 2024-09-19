@@ -125,9 +125,24 @@ export class AppComponent {
     const lowerCaseItem = this.item.toLowerCase();
     const items: { [key: string]: string } = {
       milk: "litres",
-      bread: "Grain",
-      apple: "Fruit",
-      chicken: "Meat",
+      bread: "slices",
+      apple: "units",
+      chicken: "kilograms",
+      noodle: "grams",
+      dumplings: "units",
+      pastaSauce: "grams",
+      laundryLiquid: "litres",
+      lasagne: "grams",
+      sausages: "units",
+      steak: "grams",
+      lamb: "kilograms",
+      bacon: "grams",
+      kiwifruit: "units",
+      celery: "stalks",
+      broccoli: "heads",
+      onions: "units",
+      carrots: "units",
+      beans: "grams",
     };
 
     if (items[lowerCaseItem]) {
