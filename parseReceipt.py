@@ -1,6 +1,6 @@
-import pytesseract
-from PIL import Image
 import re
+import json
+import pdfplumber
 import sqlite3
 from datetime import datetime
 import os
@@ -12,61 +12,62 @@ cursor = conn.cursor()
 # Create table if it doesn't exist
 cursor.execute('''CREATE TABLE IF NOT EXISTS receipts (
                     product_name TEXT,
+                    brand TEXT,
                     price REAL,
+                    quantity TEXT,
                     date TEXT,
-                    PRIMARY KEY (product_name)
+                    PRIMARY KEY (product_name, brand)
                 )''')
 
-# Function to extract text from image using Tesseract OCR
-def extract_text_from_image(image_path):
-    image = Image.open(image_path)
-    text = pytesseract.image_to_string(image)
+# Function to extract text from a PDF file
+def extract_text_from_pdf(pdf_path):
+    with pdfplumber.open(pdf_path) as pdf:
+        text = ''
+        for page in pdf.pages:
+            text += page.extract_text()
     return text
 
-# Function to parse the text for product names, prices, and dates
+# Function to parse the text for product names, prices, brands, and quantities
 def parse_receipt_data(text):
+    product_pattern = r'([a-zA-Z\s]+)\s+([a-zA-Z\s]+)\s+\$([0-9]+\.[0-9]{2})\s+(\d+.*)'
+    
     products = []
-    # Regex to match product names and prices (this will depend on receipt format)
-    product_pattern = r'([a-zA-Z\s]+)\s+([0-9]+\.[0-9]{2})'
-    date_pattern = r'\d{2}/\d{2}/\d{4}|\d{4}-\d{2}-\d{2}'
-    
-    # Find the date
-    date_match = re.search(date_pattern, text)
-    if date_match:
-        date_str = date_match.group(0)
-        date_obj = datetime.strptime(date_str, '%Y-%m-%d' if '-' in date_str else '%d/%m/%Y').date()
-    else:
-        date_obj = None
-    
-    # Find product name and price
     for match in re.finditer(product_pattern, text):
         product_name = match.group(1).strip()
-        price = float(match.group(2))
-        products.append((product_name, price, date_obj))
+        brand = match.group(2).strip()
+        price = float(match.group(3))
+        quantity = match.group(4).strip()
 
+        products.append({
+            "store": "Coles",  
+            "product": product_name,
+            "brand": brand,
+            "price": price,
+            "quantity": quantity
+        })
+    
     return products
 
-# Function to update the database with receipt data
+# Function to update the database with product data
 def update_database(products):
-    for product_name, price, date_obj in products:
-        # Check if the product exists in the database
-        cursor.execute("SELECT * FROM receipts WHERE product_name=?", (product_name,))
+    for product in products:
+        product_name = product["product"]
+        brand = product["brand"]
+        price = product["price"]
+        quantity = product["quantity"]
+        current_date = datetime.now().strftime('%Y-%m-%d')
+
+        # Check if the product already exists in the database
+        cursor.execute("SELECT * FROM receipts WHERE product_name=? AND brand=?", (product_name, brand))
         existing_entry = cursor.fetchone()
 
         if existing_entry:
-            # Compare the dates
-            existing_date = datetime.strptime(existing_entry[2], '%Y-%m-%d').date()
-            if date_obj > existing_date:
-                # Update entry if the new date is later
-                cursor.execute('''UPDATE receipts SET price=?, date=? WHERE product_name=?''', 
-                               (price, date_obj.strftime('%Y-%m-%d'), product_name))
-                print(f"Updated {product_name} with new price {price} and date {date_obj}")
+            print(f"{product_name} ({brand}) already exists in the database.")
         else:
-            # Insert new entry
-            cursor.execute('''INSERT INTO receipts (product_name, price, date) 
-                              VALUES (?, ?, ?)''', 
-                           (product_name, price, date_obj.strftime('%Y-%m-%d')))
-            print(f"Inserted {product_name} with price {price} and date {date_obj}")
+            cursor.execute('''INSERT INTO receipts (product_name, brand, price, quantity, date) 
+                              VALUES (?, ?, ?, ?, ?)''', 
+                           (product_name, brand, price, quantity, current_date))
+            print(f"Inserted {product_name} ({brand}) with price {price} and quantity {quantity}")
     
     conn.commit()
 
@@ -76,32 +77,47 @@ def print_results():
     rows = cursor.fetchall()
     
     print("\nDatabase Contents:")
-    print(f"{'Product Name':<20} {'Price':<10} {'Date':<15}")
-    print("-" * 45)
+    print(f"{'Product Name':<20} {'Brand':<15} {'Price':<10} {'Quantity':<10} {'Date':<15}")
+    print("-" * 70)
     for row in rows:
-        product_name, price, date = row
-        print(f"{product_name:<20} {price:<10} {date:<15}")
+        product_name, brand, price, quantity, date = row
+        print(f"{product_name:<20} {brand:<15} {price:<10} {quantity:<10} {date:<15}")
     print()
 
 # Function to process all receipts in a directory
 def process_all_receipts(directory_path):
     for filename in os.listdir(directory_path):
-        if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-            image_path = os.path.join(directory_path, filename)
-            print(f"Processing {image_path}")
-            text = extract_text_from_image(image_path)
+        if filename.lower().endswith(('.pdf')):
+            pdf_path = os.path.join(directory_path, filename)
+            print(f"Processing {pdf_path}")
+            text = extract_text_from_pdf(pdf_path)
+            products = parse_receipt_data(text)
+            update_database(products)
+
+# Function to process all promotions in a directory (similar to receipts)
+def process_all_promotions(directory_path):
+    for filename in os.listdir(directory_path):
+        if filename.lower().endswith(('.pdf')):
+            pdf_path = os.path.join(directory_path, filename)
+            print(f"Processing promotion: {pdf_path}")
+            text = extract_text_from_pdf(pdf_path)
             products = parse_receipt_data(text)
             update_database(products)
 
 # Main function to start processing
 def main():
-    receipts_directory = 'receipts'  # Directory containing receipt images
+    receipts_directory = '/Users/bhakthi/Desktop/Group-7/receipts'  
     process_all_receipts(receipts_directory)
+    
+    # You can add a promotions directory here if needed
+    promotions_directory = '/Users/bhakthi/Desktop/Group-7/promotions'  
+    process_all_promotions(promotions_directory)
+
     print_results()  # Print the results after processing
 
 # Example usage
 if __name__ == "__main__":
     main()
 
-# Close the connection to the database
+# Close the connection to the database when done
 conn.close()
