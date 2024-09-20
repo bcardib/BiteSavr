@@ -73,13 +73,29 @@ def calculate_total_cost(cheapest_products):
 def compare_stores(file_paths, basket):
     all_data = []
     for file_path in file_paths:
-        data = load_data(file_path)
-        all_data.extend(data)
+        try:
+            data = load_data(file_path)
+            if data:
+                all_data.extend(data)
+        except Exception as e:
+            print(f"Error loading data from {file_path}: {e}")
+
     cheapest_products = find_cheapest_products(all_data, basket)
     store_totals = calculate_total_cost(cheapest_products)
+
+    if not store_totals:
+        return {"error": "No valid store totals found"}
+
     cheapest_store = min(store_totals, key=store_totals.get)
     cheapest_price = store_totals[cheapest_store]
-    return {'cheapestProducts': cheapest_products, 'totalCosts': store_totals, 'cheapestStore': cheapest_store}
+
+    return {
+        'cheapestProducts': cheapest_products,
+        'totalCosts': store_totals,
+        'cheapestStore': cheapest_store,
+        'cheapestPrice': cheapest_price
+    }
+
 
 def get_store_basket(file_path, basket):
     data = load_data(file_path)
@@ -109,7 +125,7 @@ def store_baskets():
 def submit_data():
     try:
         data = request.get_json()
-        file_paths = ['colesData.json', 'aldiData.json', 'woolworthsData.json']
+        file_paths = ['products_data.json','aldiData.json', 'woolworthsData.json']
         comparison_result = compare_stores(file_paths, data)
         return jsonify(comparison_result)
     except Exception as e:
