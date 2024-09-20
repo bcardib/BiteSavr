@@ -1,0 +1,75 @@
+body {
+    font-family: 'Sans Serif', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1,
+h3,
+h4 {
+    font-family: 'Sans Serif', Arial, sans-serif;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-family: 'Sans Serif', Arial, sans-serif;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Sans Serif', Arial, sans-serif;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+    }
+}

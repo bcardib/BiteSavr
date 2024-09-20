@@ -15,29 +15,52 @@
     </li>
   </ul>
   <button (click)="submitData()">Search</button>
+  <button (click)="clearSearch()">Clear Search</button>
+
   <div *ngIf="isSearchSubmitted">
     <button (click)="togglePage()">Toggle View</button>
 
     <!-- List of the locations of the cheapest version of each product -->
-    <div *ngIf="!isSecondPage">
+    <!-- Updated Output Items List -->
+    <div *ngIf="!isSecondPage && cheapestStore != null">
       <h3>Output Items</h3>
       <ul>
         <li *ngFor="let item of outputItemList">
-          {{ item.store }}: {{ item.name }} ({{ item.quantity }}) - Price: ${{ item.price }}
+          {{ item.store }}: {{ item.name }} ({{ item.quantity }}) -
+          Price: ${{ item.price }}
+          <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
+            - Item Not Found
+          </span>
         </li>
       </ul>
     </div>
 
     <!-- Multiple store displays so user can go to just one store -->
-    <div *ngIf="isSecondPage">
+    <div *ngIf="isSecondPage && cheapestStore != null">
+
+
       <h3>Cheapest Store</h3>
-      <p>The cheapest store is: {{ cheapestStore }} with a total price of ${{ totalCosts[cheapestStore] }}</p>>
+      <p>
+        The cheapest store is: {{ cheapestStore }} with a total price of
+        ${{ totalCosts[cheapestStore] }}
+        <span *ngIf="totalCosts[cheapestStore] === 0" style="color:red;">
+          - Some items not found!
+        </span>
+      </p>
+
       <h2>{{ cheapestStore }} Basket</h2>
       <ul>
         <li *ngFor="let item of storeBaskets[cheapestStore]">
           {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
+          <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
+            - Item Not Found
+          </span>
         </li>
+        <p *ngIf="getMissingCountForStore(cheapestStore) !=0" style="color:red;">
+          Number of missing items: {{ getMissingCountForStore(cheapestStore) }}
+        </p>
       </ul>
+
       <button (click)="toggleExpanded()">
         {{ expanded ? 'Hide Other Stores' : 'Show Other Stores' }}
       </button>
@@ -48,12 +71,17 @@
             <ul>
               <li *ngFor="let item of storeBaskets[store]">
                 {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
+                <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
+                  - Item Not Found
+                </span>
               </li>
             </ul>
-            <h4>Total cost: ${{totalCosts[store]}}</h4>
+            <h4>Total cost: ${{ totalCosts[store] }}</h4>
+            <p *ngIf="getMissingCountForStore(store) !=0" style="color:red;">
+              Number of missing items: {{ getMissingCountForStore(store) }}
+            </p>
+
           </ng-container>
         </div>
       </div>
     </div>
-  </div>
-</div>
