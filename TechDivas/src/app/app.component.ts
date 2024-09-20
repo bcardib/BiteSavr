@@ -48,6 +48,7 @@ export class AppComponent {
   };
 
   cheapestStore: Store | null = null;
+  bestBasketStore: Store | null = null;
   submissionMessage: string = "";
   errorMessage: string = "";
   storeBaskets: { [store: string]: Item[] } = {
@@ -113,6 +114,29 @@ export class AppComponent {
     this.quantity = 0;
     this.itemType = null;
     this.isQuantityInputDisabled = true;
+  }
+
+  getBestBasket(): Store | null {
+    let bestStore: Store | null = null;
+    let leastMissingItems = Infinity;
+    let lowestCost = Infinity;
+
+    this.storeKeys.forEach((store) => {
+      const missingCount = this.getMissingCountForStore(store);
+      const totalCost = this.totalCosts[store];
+
+      // Check if this store has fewer missing items or if it ties with the least missing
+      if (
+        missingCount < leastMissingItems ||
+        (missingCount === leastMissingItems && totalCost < lowestCost)
+      ) {
+        bestStore = store;
+        leastMissingItems = missingCount;
+        lowestCost = totalCost;
+      }
+    });
+
+    return bestStore;
   }
 
   getCheapestStore(): Store | null {
@@ -185,6 +209,9 @@ export class AppComponent {
 
           this.calculateTotalCosts();
           this.cheapestStore = this.getCheapestStore();
+
+          // Determine the best basket
+          this.bestBasketStore = this.getBestBasket();
         },
         error: (error) => {
           console.error("Error fetching store baskets:", error);

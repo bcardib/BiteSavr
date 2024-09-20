@@ -1,87 +1,103 @@
-<div style="text-align:center">
-  <h1>Item Lookup</h1>
-  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
-    <input [(ngModel)]="item" type="text" placeholder="Enter item" (blur)="checkItem()" />
-    <p *ngIf="itemType">{{ itemType }}</p>
-    <input [(ngModel)]="quantity" type="number" placeholder="Enter quantity" [disabled]="isQuantityInputDisabled" />
-  </div>
-  <button (click)="addItem()">Add Item</button>
-  <p *ngIf="submissionMessage" style="color:green;">{{ submissionMessage }}</p>
-  <p *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</p>
-  <h3>Input Items</h3>
-  <ul>
-    <li *ngFor="let item of inputItemList">
-      {{ item.name }} ({{ item.type }}) - Quantity: {{ item.quantity }}
-    </li>
-  </ul>
-  <button (click)="submitData()">Search</button>
-  <button (click)="clearSearch()">Clear Search</button>
+<div class="container" style="text-align:center">
+  <h1>This is TechDivas' Grocery Gadget!</h1>
+  <span class="subtitle">
+    This webapp is designed to send you to the most cost efficient store for your specific type and amount of groceries
+    (a uni student's saving grace :D )
+  </span>
+  <div class="content">
 
-  <div *ngIf="isSearchSubmitted">
-    <button (click)="togglePage()">Toggle View</button>
-
-    <!-- List of the locations of the cheapest version of each product -->
-    <!-- Updated Output Items List -->
-    <div *ngIf="!isSecondPage && cheapestStore != null">
-      <h3>Output Items</h3>
-      <ul>
-        <li *ngFor="let item of outputItemList">
-          {{ item.store }}: {{ item.name }} ({{ item.quantity }}) -
-          Price: ${{ item.price }}
-          <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
-            - Item Not Found
-          </span>
-        </li>
-      </ul>
+    <h1>Item Lookup</h1>
+    <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+      <input [(ngModel)]="item" type="text" placeholder="Enter item" (blur)="checkItem()" />
+      <p *ngIf="itemType">{{ itemType }}</p>
+      <input [(ngModel)]="quantity" type="number" placeholder="Enter quantity" [disabled]="isQuantityInputDisabled" />
     </div>
+    <button (click)="addItem()">Add Item</button>
+    <p *ngIf="submissionMessage" style="color:green;">{{ submissionMessage }}</p>
+    <p *ngIf="errorMessage" style="color:red;">{{ errorMessage }}</p>
+    <h3>Input Items</h3>
+    <ul>
+      <li *ngFor="let item of inputItemList">
+        {{ item.name }} ({{ item.type }}) - Quantity: {{ item.quantity }}
+      </li>
+    </ul>
+    <button class="search" (click)="submitData()">Search</button>
+    <button (click)="clearSearch()">Clear Search</button>
 
-    <!-- Multiple store displays so user can go to just one store -->
-    <div *ngIf="isSecondPage && cheapestStore != null">
+    <div *ngIf="isSearchSubmitted">
+      <button (click)="togglePage()">Toggle View</button>
+
+      <!-- List of the locations of the cheapest version of each product -->
+      <!-- Updated Output Items List -->
+      <div *ngIf="!isSecondPage && cheapestStore != null">
+        <h3>Output Items</h3>
+        <ul>
+          <li *ngFor="let item of outputItemList">
+            {{ item.store }}: {{ item.name }} ({{ item.quantity }}) -
+            Price: ${{ item.price }}
+            <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
+              - Item Not Found
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Multiple store displays so user can go to just one store -->
+      <div *ngIf="isSecondPage && bestBasketStore != null">
 
 
-      <h3>Cheapest Store</h3>
-      <p>
-        The cheapest store is: {{ cheapestStore }} with a total price of
-        ${{ totalCosts[cheapestStore] }}
-        <span *ngIf="totalCosts[cheapestStore] === 0" style="color:red;">
-          - Some items not found!
-        </span>
-      </p>
+        <h3>Best Store</h3>
+        <p>Cheapest and the most of your items available: {{ bestBasketStore }} with a total price of
+          ${{ totalCosts[bestBasketStore] }}</p>
+        <p>
 
-      <h2>{{ cheapestStore }} Basket</h2>
-      <ul>
-        <li *ngFor="let item of storeBaskets[cheapestStore]">
-          {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
-          <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
-            - Item Not Found
+          <span *ngIf="totalCosts[bestBasketStore] === 0" style="color:red;">
+            - Some items not found!
           </span>
-        </li>
-        <p *ngIf="getMissingCountForStore(cheapestStore) !=0" style="color:red;">
-          Number of missing items: {{ getMissingCountForStore(cheapestStore) }}
         </p>
-      </ul>
 
-      <button (click)="toggleExpanded()">
-        {{ expanded ? 'Hide Other Stores' : 'Show Other Stores' }}
-      </button>
-      <div *ngIf="expanded">
-        <div *ngFor="let store of storeKeys">
-          <ng-container *ngIf="store !== cheapestStore">
-            <h4>{{ store }} Basket</h4>
-            <ul>
-              <li *ngFor="let item of storeBaskets[store]">
-                {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
-                <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
-                  - Item Not Found
-                </span>
-              </li>
-            </ul>
-            <h4>Total cost: ${{ totalCosts[store] }}</h4>
-            <p *ngIf="getMissingCountForStore(store) !=0" style="color:red;">
-              Number of missing items: {{ getMissingCountForStore(store) }}
-            </p>
+        <h2>{{ bestBasketStore }} Basket</h2>
+        <ul>
+          <li *ngFor="let item of storeBaskets[bestBasketStore]">
+            {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
+            <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
+              - Item Not Found
+            </span>
+          </li>
+          <p *ngIf="getMissingCountForStore(bestBasketStore) != 0" style="color:red;">
+            Number of missing items: {{ getMissingCountForStore(bestBasketStore) }}
+          </p>
+        </ul>
 
-          </ng-container>
+        <button (click)="toggleExpanded()">
+          {{ expanded ? 'Hide Other Stores' : 'Show Other Stores' }}
+        </button>
+        <div *ngIf="expanded">
+          <div *ngFor="let store of storeKeys">
+            <ng-container *ngIf="store !== bestBasketStore">
+              <h4>{{ store }} Basket</h4>
+              <ul>
+                <li *ngFor="let item of storeBaskets[store]">
+                  {{ item.name }} - ${{ item.price }} - {{ item.quantity }}
+                  <span *ngIf="item.quantity === 'Not Found'" style="color:red;">
+                    - Item Not Found
+                  </span>
+                </li>
+              </ul>
+              <h4>Total cost: ${{ totalCosts[store] }}</h4>
+              <p *ngIf="getMissingCountForStore(store) != 0" style="color:red;">
+                Number of missing items: {{ getMissingCountForStore(store) }}
+              </p>
+            </ng-container>
+          </div>
         </div>
       </div>
     </div>
+
+
+  </div>
+  <footer>
+    We hope your grocery shopping goes well!!<br>
+    xoxo, TechDivas ★
+  </footer>
+</div>

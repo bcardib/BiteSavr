@@ -16,4 +16,4 @@ Test Cases
 1. product not in catalogue- bread
 2. product only in catalogue - onions
 3. product in both - bacon
-4. multiple
+4. multiple: best store for number of products and price - onions, bread, milk, bacon

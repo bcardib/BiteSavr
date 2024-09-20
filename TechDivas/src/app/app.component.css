@@ -1,30 +1,54 @@
 body {
-    font-family: 'Sans Serif', Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #c8b6ff;
+    font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 20px;
 }
 
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
 h1,
+h2,
 h3,
 h4 {
-    font-family: 'Sans Serif', Arial, sans-serif;
-    color: #333;
+    color: #524072;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 10px;
 }
+
+.subtitle {
+    color: #8267B0;
+    font-family: monospace;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: block;
+}
+
 
 input[type="text"],
 input[type="number"] {
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 60%;
+    background-color: #bbd0ff;
+    border: 2px solid #333333;
     border-radius: 5px;
-    margin: 5px 0;
+    font-size: 16px;
 }
 
 button {
+    font-family: Helvetica, sans-serif;
     padding: 10px 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #37A2AB;
+
     color: white;
     cursor: pointer;
     margin: 10px 5px;
@@ -60,6 +84,26 @@ h4 {
 p {
     font-family: 'Sans Serif', Arial, sans-serif;
     margin: 5px 0;
+}
+
+footer {
+
+    color: #c8b6ff;
+    text-align: center;
+    padding: 10px;
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Make the container at least full height */
+}
+
+.content {
+    flex: 1;
+    /* This will make the content area take up the remaining space */
 }
 
 /* Responsive Design */
