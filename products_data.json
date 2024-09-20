@@ -1,254 +1,254 @@
 [
-  {
-    "store": "Coles",
-    "product": "Coles Australian Lamb Whole or Half Leg Roast",
-    "brand": "Unknown",
-    "price": null,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Fantastic Noodle Cup or Bowl Powerade Sports Drink or Active McVitie's Digestives Plain or",
-    "brand": "Unknown",
-    "price": 3.0,
-    "quantity": "266g"
-  },
-  {
-    "store": "Coles",
-    "product": "Apples",
-    "brand": "Unknown",
-    "price": 339900.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Australian Granny Smith Apples",
-    "brand": "Unknown",
-    "price": null,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Maggi Mug Noodles Maharajah's Choice Basmati Fantastic Instant Noodles 700g",
-    "brand": "Unknown",
-    "price": 0.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Pasta Italia Pasta Sauce 400g Hong Kong Dim Sim Kitchen Pork Haldirams Cocktail Samosa",
-    "brand": "Unknown",
-    "price": 1.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "83 per 100g & Chive Dumplings 300g 500g $1",
-    "brand": "Unknown",
-    "price": 1.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Cold Power Laundry Liquid Tide Laundry 3 in 1 Pods Finish Ultimate 0% Dishwashing",
-    "brand": "Unknown",
-    "price": 0.0,
-    "quantity": "2kg"
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Beef Lasagne 1",
-    "brand": "Unknown",
-    "price": 13.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Chicken Selected stores only# Cream Brie or Camembert $2",
-    "brand": "Unknown",
-    "price": 29.0,
-    "quantity": "200g"
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Classic Burgers or Sausages Charlottes Bakery Beef Pies",
-    "brand": "Unknown",
-    "price": 1.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Soft Drink Coles Australian No Added Coles RSPCA Approved Chicken",
-    "brand": "Unknown",
-    "price": null,
-    "quantity": "375g"
-  },
-  {
-    "store": "Coles",
-    "product": "1 Litre Hormones Beef Rump Steak Kebabs Honey & Soy 375g",
-    "brand": "Unknown",
-    "price": 18.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Smith's Crinkle Cut or Double Always Fresh Grissini or Crustini Coles RSPCA Approved Chicken",
-    "brand": "Unknown",
-    "price": null,
-    "quantity": "2kg"
-  },
-  {
-    "store": "Coles",
-    "product": "Sausages 8 Pack 560g Sausages 24 Pack 1",
-    "brand": "Unknown",
-    "price": 8.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "8kg Sausages 8 Pack 560g",
-    "brand": "Unknown",
-    "price": 8.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "50 per kg Chicken Burgers Plain Crumb Slices 270g $1",
-    "brand": "Unknown",
-    "price": 10.0,
-    "quantity": "2kg"
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Simply Food Containers Coles Simply Vanilla Flavoured Coles Simply Frozen Cut Beans",
-    "brand": "Unknown",
-    "price": 2.0,
-    "quantity": "1kg"
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Simply Tomato Paste Coles Simply Sandwich Slices Coles Simply Beef Lasagne",
-    "brand": "Unknown",
-    "price": 0.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Australian Lamb Loin Chops",
-    "brand": "Unknown",
-    "price": null,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Australian Lamb Coles Australian No Added Coles Australian Pork Sirloin",
-    "brand": "Unknown",
-    "price": 19.0,
-    "quantity": "500g"
-  },
-  {
-    "store": "Coles",
-    "product": "Butterflied Leg With Rosemary Hormones Beef Chuck Casserole Steak 500g $19",
-    "brand": "Unknown",
-    "price": 15.0,
-    "quantity": "850g"
-  },
-  {
-    "store": "Coles",
-    "product": "Garlic Marinade Steak 850g $15",
-    "brand": "Unknown",
-    "price": 1133.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Cut Steak 400g $42",
-    "brand": "Unknown",
-    "price": 1111.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Hormones Beef Sizzle Steak 400g Regular Mince 500g",
-    "brand": "Unknown",
-    "price": 9.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "bacon",
-    "brand": "Unknown",
-    "price": 2.0,
-    "quantity": 1
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Brand Pre-Packed Latina Pasta Sauce 425g Latina Filled Pasta 625g",
-    "brand": "Unknown",
-    "price": 1.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Australian Envy Apples Australian Raspberries Gold Kiwifruit",
-    "brand": "Unknown",
-    "price": 1.0,
-    "quantity": "125g"
-  },
-  {
-    "store": "Coles",
-    "product": "25 per kiwifruit when you buy 4",
-    "brand": "Unknown",
-    "price": null,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Australian Brown Onions Coles Australian Green Coles Australian Organic Carrots",
-    "brand": "Unknown",
-    "price": 4.0,
-    "quantity": "1kg"
-  },
-  {
-    "store": "Coles",
-    "product": "Coles Australian Organic Coles Australian Baby Broccoli Coles Dry Roasted",
-    "brand": "Unknown",
-    "price": null,
-    "quantity": "400g"
-  },
-  {
-    "store": "Coles",
-    "product": "Trimmed Celery Bunch Smoked Almonds 400g Pack",
-    "brand": "Unknown",
-    "price": 17.0,
-    "quantity": null
-  },
-  {
-    "store": "Coles",
-    "product": "Vegemite 380g Moccona Freeze Dried Instant Vittoria Coffee Beans 500g",
-    "brand": "Unknown",
-    "price": 3.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Old El Paso Beans 425g-435g Kewpie Japanese Dressing Patak's Simmer Sauce 450g",
-    "brand": "Unknown",
-    "price": 0.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "Edgell Beans 400g Heinz Baked Beanz or BSc Bodyscience Musashi Protein Crisp",
-    "brand": "Unknown",
-    "price": 5.0,
-    "quantity": "100g"
-  },
-  {
-    "store": "Coles",
-    "product": "490g-500g Pork Dumplings 230g Mixed Vegetables 1kg Potato Waffle Fries 500g",
-    "brand": "Unknown",
-    "price": 12.0,
-    "quantity": "100g"
-  }
+    {
+        "store": "Coles",
+        "product": "Coles Australian Lamb Whole or Half Leg Roast",
+        "brand": "Unknown",
+        "price": null,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Fantastic Noodle Cup or Bowl Powerade Sports Drink or Active McVitie's Digestives Plain or",
+        "brand": "Unknown",
+        "price": 3.0,
+        "quantity": "266g"
+    },
+    {
+        "store": "Coles",
+        "product": "Apples",
+        "brand": "Unknown",
+        "price": 339900.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Australian Granny Smith Apples",
+        "brand": "Unknown",
+        "price": null,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Maggi Mug Noodles Maharajah's Choice Basmati Fantastic Instant Noodles 700g",
+        "brand": "Unknown",
+        "price": 0.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Pasta Italia Pasta Sauce 400g Hong Kong Dim Sim Kitchen Pork Haldirams Cocktail Samosa",
+        "brand": "Unknown",
+        "price": 1.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "83 per 100g & Chive Dumplings 300g 500g $1",
+        "brand": "Unknown",
+        "price": 1.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Cold Power Laundry Liquid Tide Laundry 3 in 1 Pods Finish Ultimate 0% Dishwashing",
+        "brand": "Unknown",
+        "price": 0.0,
+        "quantity": "2kg"
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Beef Lasagne 1",
+        "brand": "Unknown",
+        "price": 13.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Chicken Selected stores only# Cream Brie or Camembert $2",
+        "brand": "Unknown",
+        "price": 29.0,
+        "quantity": "200g"
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Classic Burgers or Sausages Charlottes Bakery Beef Pies",
+        "brand": "Unknown",
+        "price": 1.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Soft Drink Coles Australian No Added Coles RSPCA Approved Chicken",
+        "brand": "Unknown",
+        "price": null,
+        "quantity": "375g"
+    },
+    {
+        "store": "Coles",
+        "product": "1 Litre Hormones Beef Rump Steak Kebabs Honey & Soy 375g",
+        "brand": "Unknown",
+        "price": 18.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Smith's Crinkle Cut or Double Always Fresh Grissini or Crustini Coles RSPCA Approved Chicken",
+        "brand": "Unknown",
+        "price": null,
+        "quantity": "2kg"
+    },
+    {
+        "store": "Coles",
+        "product": "Sausages 8 Pack 560g Sausages 24 Pack 1",
+        "brand": "Unknown",
+        "price": 8.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "8kg Sausages 8 Pack 560g",
+        "brand": "Unknown",
+        "price": 8.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "50 per kg Chicken Burgers Plain Crumb Slices 270g $1",
+        "brand": "Unknown",
+        "price": 10.0,
+        "quantity": "2kg"
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Simply Food Containers Coles Simply Vanilla Flavoured Coles Simply Frozen Cut Beans",
+        "brand": "Unknown",
+        "price": 2.0,
+        "quantity": "1kg"
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Simply Tomato Paste Coles Simply Sandwich Slices Coles Simply Beef Lasagne",
+        "brand": "Unknown",
+        "price": 0.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Australian Lamb Loin Chops",
+        "brand": "Unknown",
+        "price": null,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Australian Lamb Coles Australian No Added Coles Australian Pork Sirloin",
+        "brand": "Unknown",
+        "price": 19.0,
+        "quantity": "500g"
+    },
+    {
+        "store": "Coles",
+        "product": "Butterflied Leg With Rosemary Hormones Beef Chuck Casserole Steak 500g $19",
+        "brand": "Unknown",
+        "price": 15.0,
+        "quantity": "850g"
+    },
+    {
+        "store": "Coles",
+        "product": "Garlic Marinade Steak 850g $15",
+        "brand": "Unknown",
+        "price": 1133.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Cut Steak 400g $42",
+        "brand": "Unknown",
+        "price": 1111.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Hormones Beef Sizzle Steak 400g Regular Mince 500g",
+        "brand": "Unknown",
+        "price": 9.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "ppkk Short Cut Bacon 400g",
+        "brand": "Unknown",
+        "price": 22.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Brand Pre-Packed Latina Pasta Sauce 425g Latina Filled Pasta 625g",
+        "brand": "Unknown",
+        "price": 1.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Australian Envy Apples Australian Raspberries Gold Kiwifruit",
+        "brand": "Unknown",
+        "price": 1.0,
+        "quantity": "125g"
+    },
+    {
+        "store": "Coles",
+        "product": "25 per kiwifruit when you buy 4",
+        "brand": "Unknown",
+        "price": null,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Australian Brown Onions Coles Australian Green Coles Australian Organic Carrots",
+        "brand": "Unknown",
+        "price": 4.0,
+        "quantity": "1kg"
+    },
+    {
+        "store": "Coles",
+        "product": "Coles Australian Organic Coles Australian Baby Broccoli Coles Dry Roasted",
+        "brand": "Unknown",
+        "price": null,
+        "quantity": "400g"
+    },
+    {
+        "store": "Coles",
+        "product": "Trimmed Celery Bunch Smoked Almonds 400g Pack",
+        "brand": "Unknown",
+        "price": 17.0,
+        "quantity": null
+    },
+    {
+        "store": "Coles",
+        "product": "Vegemite 380g Moccona Freeze Dried Instant Vittoria Coffee Beans 500g",
+        "brand": "Unknown",
+        "price": 3.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Old El Paso Beans 425g-435g Kewpie Japanese Dressing Patak's Simmer Sauce 450g",
+        "brand": "Unknown",
+        "price": 0.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "Edgell Beans 400g Heinz Baked Beanz or BSc Bodyscience Musashi Protein Crisp",
+        "brand": "Unknown",
+        "price": 5.0,
+        "quantity": "100g"
+    },
+    {
+        "store": "Coles",
+        "product": "490g-500g Pork Dumplings 230g Mixed Vegetables 1kg Potato Waffle Fries 500g",
+        "brand": "Unknown",
+        "price": 12.0,
+        "quantity": "100g"
+    }
 ]

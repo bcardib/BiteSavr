@@ -34,7 +34,6 @@ def parse_product_info(product_line, price_line):
                 "brand": "Unknown",  # Default brand as 'Unknown' (you can adjust this if brand info is available)
                 "price": None,
                 "quantity": None,
-               
             }
 
             # Find the corresponding price and quantity from price parts
@@ -68,5 +67,8 @@ with pdfplumber.open("promotions/COLNSWMETRO_1809_3871966.pdf") as pdf:
 json_file = 'products_data.json'
 with open(json_file, 'w') as f:
     json.dump(products, f, indent=4)
+
+# Print the extracted products data
+print(json.dumps(products, indent=4))  # Add this line to print the JSON data
 
 print(f"Data successfully saved to {json_file}.")
