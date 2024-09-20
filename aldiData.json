@@ -1,109 +1,130 @@
 {
-    "productData": [
-        {
-            "store": "Aldi",
-            "product": "Milk",
-            "brand": "Farmdale",
-            "price": 1.9,
-            "quantity": "1 litre"
-        },
-        {
-            "store": "Aldi",
-            "product": "Milk",
-            "brand": "Dairy Dream",
-            "price": 2.0,
-            "quantity": "1 litre"
-        },
-        {
-            "store": "Aldi",
-            "product": "Milk",
-            "brand": "Just Organic",
-            "price": 3.2,
-            "quantity": "1 litre"
-        },
-        {
-            "store": "Aldi",
-            "product": "Bread",
-            "brand": "Baker's Life",
-            "price": 1.8,
-            "quantity": "1 loaf"
-        },
-        {
-            "store": "Aldi",
-            "product": "Bread",
-            "brand": "Bramwell's",
-            "price": 2.0,
-            "quantity": "1 loaf"
-        },
-        {
-            "store": "Aldi",
-            "product": "Bread",
-            "brand": "Highland Park",
-            "price": 2.5,
-            "quantity": "1 loaf"
-        },
-        {
-            "store": "Aldi",
-            "product": "Eggs",
-            "brand": "Hillview",
-            "price": 3.1,
-            "quantity": "1 dozen"
-        },
-        {
-            "store": "Aldi",
-            "product": "Eggs",
-            "brand": "Lodge Farms",
-            "price": 3.8,
-            "quantity": "1 dozen"
-        },
-        {
-            "store": "Aldi",
-            "product": "Eggs",
-            "brand": "Just Organic",
-            "price": 4.3,
-            "quantity": "1 dozen"
-        },
-        {
-            "store": "Aldi",
-            "product": "Pasta",
-            "brand": "Elmsbury",
-            "price": 1.2,
-            "quantity": "500 grams"
-        },
-        {
-            "store": "Aldi",
-            "product": "Pasta",
-            "brand": "Deli Green",
-            "price": 1.6,
-            "quantity": "500 grams"
-        },
-        {
-            "store": "Aldi",
-            "product": "Pasta",
-            "brand": "Bellarom",
-            "price": 1.5,
-            "quantity": "500 grams"
-        },
-        {
-            "store": "Aldi",
-            "product": "Rice",
-            "brand": "Imperial Grain",
-            "price": 1.6,
-            "quantity": "1 kilogram"
-        },
-        {
-            "store": "Aldi",
-            "product": "Rice",
-            "brand": "Earthly Grains",
-            "price": 2.0,
-            "quantity": "1 kilogram"
-        },
-        {
-            "store": "Aldi",
-            "product": "Rice",
-            "brand": "Bellarom",
-            "price": 1.8,
-            "quantity": "1 kilogram"
-        }
-    ]
+  "productData": [
+    {
+      "store": "Aldi",
+      "product": "Milk",
+      "brand": "Farmdale",
+      "price": 1.9,
+      "quantity": "1 litre"
+    },
+    {
+      "store": "Aldi",
+      "product": "Milk",
+      "brand": "Dairy Dream",
+      "price": 2.0,
+      "quantity": "1 litre"
+    },
+    {
+      "store": "Aldi",
+      "product": "Milk",
+      "brand": "Just Organic",
+      "price": 3.2,
+      "quantity": "1 litre"
+    },
+    {
+      "store": "Aldi",
+      "product": "Bread",
+      "brand": "Baker's Life",
+      "price": 1.8,
+      "quantity": "1 loaf"
+    },
+    {
+      "store": "Aldi",
+      "product": "Bread",
+      "brand": "Bramwell's",
+      "price": 2.0,
+      "quantity": "1 loaf"
+    },
+    {
+      "store": "Aldi",
+      "product": "Bread",
+      "brand": "Highland Park",
+      "price": 2.5,
+      "quantity": "1 loaf"
+    },
+    {
+      "store": "Aldi",
+      "product": "Eggs",
+      "brand": "Hillview",
+      "price": 3.1,
+      "quantity": "1 dozen"
+    },
+    {
+      "store": "Aldi",
+      "product": "Eggs",
+      "brand": "Lodge Farms",
+      "price": 3.8,
+      "quantity": "1 dozen"
+    },
+    {
+      "store": "Aldi",
+      "product": "Eggs",
+      "brand": "Just Organic",
+      "price": 4.3,
+      "quantity": "1 dozen"
+    },
+    {
+      "store": "Aldi",
+      "product": "Pasta",
+      "brand": "Elmsbury",
+      "price": 1.2,
+      "quantity": "500 grams"
+    },
+    {
+      "store": "Aldi",
+      "product": "Pasta",
+      "brand": "Deli Green",
+      "price": 1.6,
+      "quantity": "500 grams"
+    },
+    {
+      "store": "Aldi",
+      "product": "Pasta",
+      "brand": "Bellarom",
+      "price": 1.5,
+      "quantity": "500 grams"
+    },
+    {
+      "store": "Aldi",
+      "product": "Rice",
+      "brand": "Imperial Grain",
+      "price": 1.6,
+      "quantity": "1 kilogram"
+    },
+    {
+      "store": "Aldi",
+      "product": "Rice",
+      "brand": "Earthly Grains",
+      "price": 2.0,
+      "quantity": "1 kilogram"
+    },
+    {
+      "store": "Aldi",
+      "product": "Rice",
+      "brand": "Bellarom",
+      "price": 1.8,
+      "quantity": "1 kilogram"
+    },
+    {
+      "store": "Aldi",
+      "product": "Bacon",
+      "brand": "Deli Fresh",
+      "price": 5.0,
+      "quantity": "250 grams"
+    },
+    {
+      "store": "Aldi",
+      "product": "Bacon",
+      "brand": "Hillview",
+      "price": 5.5,
+      "quantity": "250 grams"
+    },
+    {
+      "store": "Aldi",
+      "product": "Bacon",
+      "brand": "Purely Pork",
+      "price": 6.0,
+      "quantity": "250 grams"
+    }
+  ]
 }

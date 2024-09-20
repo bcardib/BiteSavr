@@ -1,110 +1,130 @@
 {
-    "productData": [
-      {
-        "store": "Woolworths",
-        "product": "Milk",
-        "brand": "Woolworths",
-        "price": 2.4,
-        "quantity": "1 litre"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Milk",
-        "brand": "Paul's",
-        "price": 2.9,
-        "quantity": "1 litre"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Milk",
-        "brand": "A2",
-        "price": 3.5,
-        "quantity": "1 litre"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Bread",
-        "brand": "Woolworths",
-        "price": 1.9,
-        "quantity": "700 grams"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Bread",
-        "brand": "Helga's",
-        "price": 3.2,
-        "quantity": "700 grams"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Bread",
-        "brand": "Lawson's",
-        "price": 3.5,
-        "quantity": "700 grams"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Eggs",
-        "brand": "Woolworths",
-        "price": 3.4,
-        "quantity": "12 eggs"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Eggs",
-        "brand": "Pace Farm",
-        "price": 4.1,
-        "quantity": "12 eggs"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Eggs",
-        "brand": "Free Range Eggs",
-        "price": 3.9,
-        "quantity": "12 eggs"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Pasta",
-        "brand": "Woolworths",
-        "price": 1.4,
-        "quantity": "500 grams"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Pasta",
-        "brand": "Vetta",
-        "price": 1.8,
-        "quantity": "500 grams"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Pasta",
-        "brand": "San Remo",
-        "price": 1.7,
-        "quantity": "500 grams"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Rice",
-        "brand": "Woolworths",
-        "price": 1.8,
-        "quantity": "1 kg"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Rice",
-        "brand": "SunRice",
-        "price": 2.2,
-        "quantity": "1 kg"
-      },
-      {
-        "store": "Woolworths",
-        "product": "Rice",
-        "brand": "Basmati Express",
-        "price": 2.5,
-        "quantity": "1 kg"
-      }
-    ]
-  }
-  
+  "productData": [
+    {
+      "store": "Woolworths",
+      "product": "Milk",
+      "brand": "Woolworths",
+      "price": 2.4,
+      "quantity": "1 litre"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Milk",
+      "brand": "Paul's",
+      "price": 2.9,
+      "quantity": "1 litre"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Milk",
+      "brand": "A2",
+      "price": 3.5,
+      "quantity": "1 litre"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Bread",
+      "brand": "Woolworths",
+      "price": 1.9,
+      "quantity": "700 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Bread",
+      "brand": "Helga's",
+      "price": 3.2,
+      "quantity": "700 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Bread",
+      "brand": "Lawson's",
+      "price": 3.5,
+      "quantity": "700 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Eggs",
+      "brand": "Woolworths",
+      "price": 3.4,
+      "quantity": "12 eggs"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Eggs",
+      "brand": "Pace Farm",
+      "price": 4.1,
+      "quantity": "12 eggs"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Eggs",
+      "brand": "Free Range Eggs",
+      "price": 3.9,
+      "quantity": "12 eggs"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Pasta",
+      "brand": "Woolworths",
+      "price": 1.4,
+      "quantity": "500 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Pasta",
+      "brand": "Vetta",
+      "price": 1.8,
+      "quantity": "500 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Pasta",
+      "brand": "San Remo",
+      "price": 1.7,
+      "quantity": "500 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Rice",
+      "brand": "Woolworths",
+      "price": 1.8,
+      "quantity": "1 kg"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Rice",
+      "brand": "SunRice",
+      "price": 2.2,
+      "quantity": "1 kg"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Rice",
+      "brand": "Basmati Express",
+      "price": 2.5,
+      "quantity": "1 kg"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Bacon",
+      "brand": "Woolworths",
+      "price": 5.0,
+      "quantity": "250 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Bacon",
+      "brand": "Free Range Bacon",
+      "price": 6.0,
+      "quantity": "250 grams"
+    },
+    {
+      "store": "Woolworths",
+      "product": "Bacon",
+      "brand": "Middle Bacon",
+      "price": 5.5,
+      "quantity": "250 grams"
+    }
+  ]
+}

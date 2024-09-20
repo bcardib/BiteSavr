@@ -1,7 +1,9 @@
 # Group-7
+
 Team Name: TechDivas
 
 **Run Program From Clone**
+
 1. Open integrated terminal and run command "npm install"
 2. Navigate to 'Group-7/TechDivas/src/app'
 3. Run command "ng s"
@@ -9,5 +11,9 @@ Team Name: TechDivas
 5. Navigate to 'Group-7' the base folder
 6. Run command "python3 app.py"
 
+Test Cases
 
-brew install tesseract
+1. product not in catalogue- bread
+2. product only in catalogue - onions
+3. product in both - bacon
+4. multiple
